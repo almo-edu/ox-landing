@@ -1,4 +1,4 @@
-import { Box, Text } from "materials"
+import { Box } from "materials"
 import styled from "styled-components"
 import { RiDoubleQuotesL, RiDoubleQuotesR } from 'react-icons/ri'
 

@@ -3,11 +3,12 @@ import styled from "styled-components"
 import adv1 from "assets/adv1.png"
 import adv2 from "assets/adv2.png"
 import { Button } from "antd"
+import { useNavigate } from "react-router-dom"
 
 
 const Wrapper = styled.section`
     background-color: #F5F5F5;
-    height: 110vh;
+    height: 990px;
     display: flex;
     flex-direction: column;
 
@@ -26,6 +27,9 @@ const Wrapper = styled.section`
 `
 
 export function Advantages(){
+    const navigate = useNavigate()
+    const toQuiz = () => navigate('/quiz/HIS/1')
+    
     return (
         <Wrapper>
             <Box 
@@ -81,7 +85,7 @@ export function Advantages(){
             </Box>
             
             <Box flexDirection="column" alignItems="center" paddingTop={24} paddingBottom={48}>
-                <Button type="primary" >
+                <Button type="primary" onClick={toQuiz} >
                     O/X 문제 풀어보기
                 </Button>
                 <Text type="D1" content="· 작년 한국사 기출을 O/X로 풀어볼 수 있어요." marginTop={12} />
