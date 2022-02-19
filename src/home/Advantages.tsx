@@ -2,11 +2,12 @@ import { Box, Text } from "materials"
 import styled from "styled-components"
 import adv1 from "assets/adv1.png"
 import adv2 from "assets/adv2.png"
+import { Button } from "antd"
 
 
 const Wrapper = styled.section`
     background-color: #F5F5F5;
-    height: 90vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
 
@@ -14,6 +15,13 @@ const Wrapper = styled.section`
         width: 30vw;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 6px;
+    }
+
+    button {
+        width: 60vw;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 8px;
     }
 `
 
@@ -69,6 +77,14 @@ export function Advantages(){
                         <img src={adv2} />
                     </Box>
                 </Box>
+
+            </Box>
+            
+            <Box flexDirection="column" alignItems="center" paddingTop={24} paddingBottom={48}>
+                <Button type="primary" >
+                    O/X 문제 풀어보기
+                </Button>
+                <Text type="D1" content="· 작년 한국사 기출을 O/X로 풀어볼 수 있어요." marginTop={12} />
             </Box>
 
         </Wrapper>
