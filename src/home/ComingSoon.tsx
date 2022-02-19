@@ -14,7 +14,7 @@ const Wrapper = styled.section`
     justify-content: space-between;
 
     img {
-
+        width: 115px;
         border-radius: 12px;
         box-shadow: rgba(0, 0, 0, 0.12) 2px 4px 6px;
     }
@@ -45,9 +45,8 @@ export function ComingSoon(){
                 <Text size={11} content="✔총 18개 탐구 과목 평가원/교육청 기출" marginTop={18} />
                 <Text type="D2" size={9} content="*응시생 많은 과목부터 순차 출시" marginTop={4} />
             </Box>
-            <Box paddingVertical={16}>
-                <img src={adv1} />
-            </Box>
+
+            <img src={adv1} />
         </Wrapper>
     )
 }
