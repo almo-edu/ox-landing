@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/whynotedu/static/css/main.a2c247fb.css",
-    "main.js": "/whynotedu/static/js/main.df238e2d.js",
+    "main.js": "/whynotedu/static/js/main.62845fe9.js",
     "static/media/adv2.png": "/whynotedu/static/media/adv2.99c140487f989ce43527.png",
     "static/media/feature1.png": "/whynotedu/static/media/feature1.53f63d3a37526f6f7096.png",
     "static/media/adv1.png": "/whynotedu/static/media/adv1.c1db4b1855a924a44799.png",
     "index.html": "/whynotedu/index.html",
     "main.a2c247fb.css.map": "/whynotedu/static/css/main.a2c247fb.css.map",
-    "main.df238e2d.js.map": "/whynotedu/static/js/main.df238e2d.js.map"
+    "main.62845fe9.js.map": "/whynotedu/static/js/main.62845fe9.js.map"
   },
   "entrypoints": [
     "static/css/main.a2c247fb.css",
-    "static/js/main.df238e2d.js"
+    "static/js/main.62845fe9.js"
   ]
 }
