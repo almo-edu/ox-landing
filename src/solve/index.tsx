@@ -8,8 +8,8 @@ import { Tag } from "antd";
 import { MAIN_COLOR } from "style/constants";
 
 const Wrapper = styled.div`
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 22px;
+    
     .img-container {
         width: 100%;
         height: 250px;
