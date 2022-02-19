@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Box, Text } from "materials";
 import { Button } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const HEADER_HEIGHT = "54px";
 
@@ -25,20 +25,25 @@ const HeaderContainer = styled.header`
 
 export function Header(){
     const navigate = useNavigate()
-    const toRegister = () => navigate('register')
+    const location = useLocation()
+    const isRegistering = location.pathname === '/register'
+    console.log(location.pathname)
+    console.log(isRegistering)
+
+    const onClickLink = () => navigate(isRegistering ? '' : '/register')
+
     return (
         <HeaderContainer>
             <Box>
                 <Text type="H2" content="오늘의 선지" />
 
                 <Button 
-                    onClick={toRegister}
+                    onClick={onClickLink}
                     type="link" 
                     color="primary" 
                     style={{padding: 0}} 
-
                 >
-                    사전등록하기
+                    {isRegistering ? "홈으로" : "사전등록하기"}
                 </Button>
             </Box>
         </HeaderContainer>
