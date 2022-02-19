@@ -76,7 +76,7 @@ export function Solve(){
                         <FiCircle size={64} />
                     </button>
                     <button className="ox-pad">
-                        <FiX size={72} />
+                        <FiX size={75} />
                     </button>
                 </div>
 
