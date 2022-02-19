@@ -6,7 +6,7 @@ import { ChangeEvent, useRef, useState } from "react";
 import { register_api } from "api/register.api";
 
 const Wrapper = styled.div`
-    padding-top: 16px;
+    padding: 16px 22px;
     .ant-col{
         padding-bottom: 6px;
     }

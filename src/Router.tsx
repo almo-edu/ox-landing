@@ -9,7 +9,7 @@ import styled from "styled-components";
 const Main = styled.div`
     max-width: 720px;
     margin: auto;
-    padding: ${HEADER_HEIGHT} 22px 22px 22px;
+    padding: ${HEADER_HEIGHT} 0 0 0 ;
 
 `
 
@@ -21,7 +21,7 @@ export function Router(){
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/:code/:no" element={<Solve />} />
+                    <Route path="/quiz/:code/:no" element={<Solve />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Main>

@@ -5,8 +5,7 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components"
 import {FiCircle, FiX} from "react-icons/fi";
 import { Tag } from "antd";
-
-// background-color: #19CE6066;
+import { MAIN_COLOR } from "style/constants";
 
 const Wrapper = styled.div`
     padding-top: 16px;
@@ -25,7 +24,7 @@ const Wrapper = styled.div`
     .ox-container {
         margin-top: 48px;
         padding: 0 12px;
-        aspect-ratio: 2;
+        aspect-ratio: 2.4;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
@@ -39,8 +38,9 @@ const Wrapper = styled.div`
         border-radius: 10px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
-        :active {
+        :active, :hover, :focus {
             box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+            background-color: ${MAIN_COLOR};
         }
     }
 `
