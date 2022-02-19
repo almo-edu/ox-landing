@@ -4,11 +4,12 @@ import { NotFound } from "NotFound";
 import { useParams } from "react-router-dom";
 import styled from "styled-components"
 import {FiCircle, FiX} from "react-icons/fi";
+import { Tag } from "antd";
 
 // background-color: #19CE6066;
 
 const Wrapper = styled.div`
-    padding-top: 24px;
+    padding-top: 16px;
     padding-bottom: 16px;
     .img-container {
         width: 100%;
@@ -24,7 +25,7 @@ const Wrapper = styled.div`
     .ox-container {
         margin-top: 48px;
         padding: 0 12px;
-        aspect-ratio: 1.4;
+        aspect-ratio: 2;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
@@ -64,10 +65,10 @@ export function Solve(){
 
     return (
         <Wrapper>
+            <Tag color="gold" children={subject.name} />
             <Box flexDirection="column">
-                <Text type="H1" content={subject.name} />
-                <Text type="P1" content={`${no}. ${question}`} marginTop={12} />
-                <Text type="D1" align="right" content={source} marginBottom={16} />
+                <Text type="P1" content={`${no}. ${question}`} marginTop={8} />
+                <Text type="D1" content={source} align="right" marginVertical={5} />
                 <div className="img-container">
                     <img src={image}/>
                 </div>
