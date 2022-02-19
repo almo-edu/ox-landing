@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/whynotedu/static/css/main.a2c247fb.css",
-    "main.js": "/whynotedu/static/js/main.41e5e0d4.js",
+    "main.js": "/whynotedu/static/js/main.24481d7f.js",
     "index.html": "/whynotedu/index.html",
     "main.a2c247fb.css.map": "/whynotedu/static/css/main.a2c247fb.css.map",
-    "main.41e5e0d4.js.map": "/whynotedu/static/js/main.41e5e0d4.js.map"
+    "main.24481d7f.js.map": "/whynotedu/static/js/main.24481d7f.js.map"
   },
   "entrypoints": [
     "static/css/main.a2c247fb.css",
-    "static/js/main.41e5e0d4.js"
+    "static/js/main.24481d7f.js"
   ]
 }
