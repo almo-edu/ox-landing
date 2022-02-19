@@ -27,10 +27,8 @@ export function Header(){
     const navigate = useNavigate()
     const location = useLocation()
     const isRegistering = location.pathname === '/register'
-    console.log(location.pathname)
-    console.log(isRegistering)
 
-    const onClickLink = () => navigate(isRegistering ? '' : '/register')
+    const onClickLink = () => navigate(isRegistering ? '/' : 'register')
 
     return (
         <HeaderContainer>

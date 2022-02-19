@@ -1,7 +1,9 @@
 import { Home } from "home";
+import { NotFound } from "NotFound";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Register } from "register";
 import { Header, HEADER_HEIGHT } from "section/Header";
+import { Solve } from "solve";
 import styled from "styled-components";
 
 const Main = styled.div`
@@ -19,6 +21,8 @@ export function Router(){
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path="/:code/:no" element={<Solve />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </Main>
         </HashRouter>
