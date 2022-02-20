@@ -4,7 +4,7 @@ import feature_img from "assets/feature1.png"
 
 const Wrapper = styled.section`
     background-color: #DDFAF5;
-    height: 720px;
+    height: 750px;
     display: flex;
     flex-direction: column;
 

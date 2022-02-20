@@ -7,7 +7,7 @@ import { Solve } from "solve";
 import styled from "styled-components";
 
 const Main = styled.div`
-    max-width: 720px;
+    max-width: 500px;
     margin: auto;
     padding: ${HEADER_HEIGHT} 0 0 0 ;
 
@@ -21,7 +21,7 @@ export function Router(){
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/quiz/:code/:no" element={<Solve />} />
+                    <Route path="/quiz/:code" element={<Solve />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Main>

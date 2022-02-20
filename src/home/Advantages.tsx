@@ -13,13 +13,13 @@ const Wrapper = styled.section`
     flex-direction: column;
 
     img {
-        width: 30vw;
+        width: 30%;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 6px;
     }
 
     button {
-        width: 60vw;
+        width: 60%;
         height: 50px;
         font-size: 18px;
         border-radius: 8px;
@@ -28,7 +28,7 @@ const Wrapper = styled.section`
 
 export function Advantages(){
     const navigate = useNavigate()
-    const toQuiz = () => navigate('/quiz/HIS/1')
+    const toQuiz = () => navigate('/quiz/HIS')
     
     return (
         <Wrapper>

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Box, Text } from "materials";
 import { Button } from "antd";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { MAIN_COLOR } from "style/constants";
 
 export const HEADER_HEIGHT = "54px";
@@ -26,9 +26,11 @@ const HeaderContainer = styled.header`
 
 export function Header(){
     const navigate = useNavigate()
+    const location = useLocation()
     const toHome = () => navigate('/')
     const toRegister = () => navigate('/register')
-    const toQuiz = () => navigate('quiz/HIS/1')
+    const toQuiz = () => navigate('quiz/HIS')
+    console.log(location.pathname)
 
     return (
         <HeaderContainer>
@@ -36,20 +38,24 @@ export function Header(){
                 <Text type="H2" content="오늘의 선지" onClick={toHome} />
 
                 <Box>
-                    <Button 
-                        onClick={toQuiz}
-                        type="primary" 
-                        color={MAIN_COLOR} 
-                    > 
-                        문제 풀어보기
-                    </Button>
+                    {location.pathname === "/" && (
+                        <Button 
+                            onClick={toQuiz}
+                            type="primary" 
+                            color={MAIN_COLOR} 
+                        > 
+                            문제 풀어보기
+                        </Button>
+                    )}
                     <span style={{padding:4}} />
-                    <Button 
-                        onClick={toRegister}
-                        type="ghost" 
-                    > 
-                        더 알아보기
-                    </Button>
+                    {location.pathname!=="/register" && (
+                        <Button 
+                            onClick={toRegister}
+                            type="ghost" 
+                        > 
+                            더 알아보기
+                        </Button>
+                    )}
                 </Box>
             </Box>
         </HeaderContainer>
