@@ -54,5 +54,6 @@ const GlobalStyle = createGlobalStyle`
             outline: none;
         }
     }
+
 `
 export default GlobalStyle;

@@ -1,10 +1,12 @@
 import styled from "styled-components"
-import { Form, Input, Button, Checkbox, Divider } from 'antd';
+import { Form, Input, Button, Checkbox, Divider, Radio } from 'antd';
 import { MdRemove } from 'react-icons/md'
 import { Box, Text } from "materials"
 import { ChangeEvent, useRef, useState } from "react";
 import { register_api } from "api/register.api";
 import { useNavigate } from "react-router-dom";
+import { Event } from "./Event"
+import { Gifts } from "./Gifts";
 
 const Wrapper = styled.div`
     padding: 16px 22px;
@@ -13,6 +15,9 @@ const Wrapper = styled.div`
     }
     .ant-col{
         padding-bottom: 6px;
+        label {
+            height: 24px;
+        }
     }
     label {
         font-size: 15px;
@@ -23,17 +28,23 @@ const Wrapper = styled.div`
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
-    .call-out {
-        background-color: #e3f1ff;
-        border-radius: 5px;
-        margin: auto;
-        padding: 6px;
-        & > span{
-            height: 12px;
-        }
-    }
     .ant-divider-horizontal {
         margin: 12px 0;
+    }
+    .ant-radio-group-small {
+        display: flex;
+        & > * {
+            flex: 1;
+            text-align: center;
+        }
+        & * {
+            font-size: 13px;
+        }
+    }
+
+    .policy * {
+        font-size: 9px;
+        height: 13px;
     }
 `
 
@@ -86,13 +97,13 @@ export function Register(){
     }
 
 
-    const onSubmit = ({agree, email}:{agree:boolean, email?: string}) => {
+    const onSubmit = ({agree, grade}:{agree:boolean, grade: string}) => {
         const tel=`${tel1}${tel2}${tel3}`
-        if(!tel && !email){
-            alert("전화번호나 이메일 중 하나를 입력해주세요.")
+        if(!grade){
+            alert('모의고사(탐구) 평균 등급을 선택해 주세요!')
             return;
         }
-        if(!email && tel.length!==11){
+        if(tel.length!==11){
             alert("전화번호를 확인해주세요.")
             return;
         }
@@ -105,26 +116,22 @@ export function Register(){
             return;
         }
         const subject_selected = subjects.filter((s, i) => subjectSelected[i])
-        register_api(tel, subject_selected, email).then(() => navigate('/thankyou'))
+        register_api(tel, subject_selected, grade).then(() => navigate('/thankyou'))
     }
 
     return (
+        <>
+        <Event />
+        <Gifts />
          <Wrapper>
             <Form 
                 autoComplete="off"
                 onFinish={onSubmit}
             >
-                <div className="call-out">
-                    <Box flexDirection="column" alignItems="center">
-                        <Text size={12} content='💡 "오늘의 선지"는 4월 중, iOS/Android 동시 출시예정이에요.' marginBottom={-2} />
-                        <Text size={12} content="아래의 항목을 작성하여 누구보다 빠르게 출시 소식을 받아보세요."  />
-                    </Box>
-                </div>
-
-                <Box flexDirection="column" marginTop={12} marginBottom={24}>
+                <Box flexDirection="column" marginVertical={12}>
                     <Text 
                         type="P1" 
-                        content="전화번호" 
+                        content="*전화번호" 
                         marginBottom={6} 
                     />
                     <Box alignItems="center" style={{width: 300}}>
@@ -158,30 +165,25 @@ export function Register(){
                     </Box>
                 </Box>
 
-                <Text 
-                    type="P1" 
-                    content="이메일"  
-                />
-                <Form.Item
-                    name="email"
-                    // valuePropName="email"
-                    rules={[{ 
-                        type: 'email',
-                        message: '이메일 형식이 올바르지 않습니다.'
-                    }]}
-                    style={{marginTop: 6}}
+
+                <Form.Item 
+                    label="*모의고사 평균 등급(탐구)" 
+                    name="grade" 
                 >
-                    <Input  />
+                    <Radio.Group size="small">
+                        <Radio.Button value="1~2등급">1~2등급</Radio.Button>
+                        <Radio.Button value="3~4등급">3~4등급</Radio.Button>
+                        <Radio.Button value="5~6등급">5~6등급</Radio.Button>
+                        <Radio.Button value="7~9등급">7~9등급</Radio.Button>
+                        <Radio.Button value="모름">모름</Radio.Button>
+                    </Radio.Group>
                 </Form.Item>
 
-
-                <Text type="D2" content="전화번호 혹은 이메일을 통해 출시 소식을 알려드릴게요!" />
-                <Divider />
             
                 <Box flexDirection="column" marginVertical={12} >
                     <Text 
                         type="P1" 
-                        content="관심있는 탐구 과목을 선택해주세요." 
+                        content="*관심있는 탐구 과목을 선택해주세요." 
                         marginBottom={6} 
                     />
 
@@ -277,6 +279,24 @@ export function Register(){
                     valuePropName="checked"
                 >
                     <Checkbox>개인정보 수집 및 활용에 동의합니다.</Checkbox>
+                    <Box flexDirection="column" className="policy">
+                        <Text 
+                            type="D2"
+                            content="개인정보의 수집·이용 목적: 이벤트 진행" 
+                        />
+                        <Text 
+                            type="D2"
+                            content="수집하려는 개인정보의 항목: 전화번호, 모의고사 평균 등급, 선택 탐구과목" 
+                        />
+                        <Text 
+                            type="D2"
+                            content="개인정보의 보유 및 이용기간: 이벤트 종료 및 서비스 출시 알림 전송 후 파기" 
+                        />
+                        <Text 
+                            type="D2"
+                            content="*동의를 거부할 권리가 있으며 동의 거부시 이벤트 참여가 제한될 수 있습니다." 
+                        />
+                    </Box>
                 </Form.Item>
 
 
@@ -287,5 +307,6 @@ export function Register(){
                 </Form.Item>
             </Form>
         </Wrapper>
+        </>
     );
 }
