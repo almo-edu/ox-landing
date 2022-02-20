@@ -25,7 +25,7 @@ export function Feature(){
                 <Text size={16} content="O/X로 수능 정복하자!" marginTop={10} />
             </Box>
             <Box flex={1} justifyContent="center" >
-                <img src={feature_img} />
+                <img src="https://user-images.githubusercontent.com/30591542/154839469-9edd791a-f2e3-4bf8-a299-73fdc4436ba6.png" />
             </Box>
         </Wrapper>
     )
