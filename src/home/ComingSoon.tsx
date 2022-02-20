@@ -34,7 +34,7 @@ export function ComingSoon(){
         <Wrapper>
             <Box flexDirection="column" justifyContent="center">
                 <Text size={20} content="Coming Soon" color={MAIN_COLOR} />
-                <Text size={24} content="오늘의 선지" marginTop={12} />
+                <Text bold size={24} content="오늘의 선지" marginTop={12} />
                 <Text type="D1" content="4월 iOS,Android 앱 출시 예정" marginTop={8} marginBottom={18} />
                 
 
