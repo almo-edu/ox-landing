@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     .ant-btn-primary {
         background: ${MAIN_COLOR};
         border-color: ${MAIN_COLOR};
-        :active, :hover {
+        :active, :hover, :focus {
             background: ${MAIN_COLOR};
             border-color: ${MAIN_COLOR};
             outline: none;

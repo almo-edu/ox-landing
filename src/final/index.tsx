@@ -6,7 +6,7 @@ import { useResetRecoilState } from "recoil"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-    height: 90vh;
+    height: 80vh;
     display: flex;
 
     & > div {

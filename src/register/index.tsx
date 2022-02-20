@@ -99,7 +99,7 @@ export function Register(){
             return;
         }
         const subject_selected = subjects.filter((s, i) => subjectSelected[i])
-        register_api(tel, subject_selected, email).then(() => navigate('thankyou'))
+        register_api(tel, subject_selected, email).then(() => navigate('/thankyou'))
     }
 
     return (
