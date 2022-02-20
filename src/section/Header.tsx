@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Box, Text } from "materials";
-import { Button } from "antd";
+import { Button, Popover } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import { MAIN_COLOR } from "style/constants";
 
@@ -49,12 +49,29 @@ export function Header(){
                     )}
                     <span style={{padding:4}} />
                     {location.pathname!=="/register" && (
-                        <Button 
-                            onClick={toRegister}
-                            type="ghost" 
-                        > 
-                            더 알아보기
-                        </Button>
+                        <Popover placement="bottom" content={
+                            <Box flexDirection="column" alignItems="center">
+                                <span>오늘의 선지 사전예약하고,</span>
+                                <span 
+                                    style={{
+                                        backgroundColor: "#ffcc8e", 
+                                        paddingLeft: 3, 
+                                        paddingRight: 3,
+                                        borderRadius: 3,
+                                        fontWeight: 600
+                                    }}>
+                                    🍗BBQ 🍧베라 기프티콘 받자!
+                                </span>
+                            </Box>
+                        } trigger="focus">
+                            <Button 
+                                autoFocus
+                                onClick={toRegister}
+                                type="ghost" 
+                            > 
+                                더 알아보기
+                            </Button>
+                      </Popover>
                     )}
                 </Box>
             </Box>
