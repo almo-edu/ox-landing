@@ -14,6 +14,7 @@ const Wrapper = styled.div`
         background-color: #ffcc8e;
         border-radius: 3px;
         padding: 4px 4px 1px 0.5px;
+        font-weight: 700;
     }
 `
 export const Event = () => {
