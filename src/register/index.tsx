@@ -8,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
     padding: 16px 22px;
+    .ant-form-item {
+        margin-bottom: 6px;
+    }
     .ant-col{
         padding-bottom: 6px;
     }
@@ -28,6 +31,9 @@ const Wrapper = styled.div`
         & > span{
             height: 12px;
         }
+    }
+    .ant-divider-horizontal {
+        margin: 12px 0;
     }
 `
 
@@ -168,6 +174,8 @@ export function Register(){
                     <Input  />
                 </Form.Item>
 
+
+                <Text type="D2" content="전화번호 혹은 이메일을 통해 출시 소식을 알려드릴게요!" />
                 <Divider />
             
                 <Box flexDirection="column" marginVertical={12} >
@@ -187,7 +195,7 @@ export function Register(){
 
 
 
-                    <Divider style={{marginTop: 12, marginBottom:12}} />
+                    <Divider />
                     {/* 사탐 */}
                     <Text type="P2" content="[ 사회탐구 ]" marginBottom={5} />
                     <div className="grid-box">
@@ -227,7 +235,7 @@ export function Register(){
                         ))}
                     </div>
 
-                    <Divider style={{marginTop: 12, marginBottom:12}} />
+                    <Divider />
                     {/* 과탐 */}
                     <Text type="P2" content="[ 과학탐구 ]" marginBottom={5} />
                     <div className="grid-box">
