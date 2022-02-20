@@ -14,10 +14,14 @@ export function Thankyou(){
             justifyContent="center"
         >
             <Text type="P1" bold content="참여해 주셔서 감사합니다." marginBottom={12}/>
-            <Button type="primary" onClick={goHome}>
+            <Box alignItems="center" marginBottom={12}>
+                <Text type="D1" content="4월에 만나요~ 제발~~ " />
+                <Text type="P1" content="🥺" />
+            </Box>
+            <Button type="primary" onClick={goHome} style={{width: 160}}>
                 홈으로
             </Button>
-            <div style={{marginTop: 45}}>
+            <div style={{marginTop: 24}}>
                 <Text bold content="Contact" />
                 <Text content="whynotedu.official@gmail.com" marginLeft={12} />
             </div>

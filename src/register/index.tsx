@@ -110,8 +110,8 @@ export function Register(){
             >
                 <div className="call-out">
                     <Box flexDirection="column" alignItems="center">
-                        <Text size={11} content="💡 ’오늘의 선지’는 4월 중, ios/android 동시 출시예정이에요." marginBottom={-2} />
-                        <Text size={11} content="아래의 항목을 작성하여 누구보다 빠르게 출시 소식을 받아보세요."  />
+                        <Text size={12} content='💡 "오늘의 선지"는 4월 중, iOS/Android 동시 출시예정이에요.' marginBottom={-2} />
+                        <Text size={12} content="아래의 항목을 작성하여 누구보다 빠르게 출시 소식을 받아보세요."  />
                     </Box>
                 </div>
 

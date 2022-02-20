@@ -13,8 +13,9 @@ export function NotFound(){
             alignItems="center" 
             justifyContent="center"
         >
-            <Text type="H1" content='NOT FOUND "404"' />
-            <Text type="P1" content="페이지를 찾지 못했습니다." marginVertical={6}/>
+            <Text type="H1" size={40} content='404' />
+            <Text type="H1" content='NOT FOUND' marginTop={6} />
+            <Text type="D1" content="요청하신 페이지를 찾을 수 없습니다." marginTop={6} marginBottom={18}/>
             <Button type="primary" onClick={goHome}>
                 홈으로
             </Button>
