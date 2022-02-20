@@ -28,7 +28,7 @@ const Wrapper = styled.div`
     .ox-container {
         margin-top: 48px;
         padding: 0 12px;
-        aspect-ratio: 2.4;
+        aspect-ratio: 2.2;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 24px;
@@ -93,7 +93,7 @@ export function Solve(){
                 <Tag color="default" children={`${no} / ${subject.problems.length}`} />
             </Box>
             <Box flexDirection="column">
-                <Text type="P1" content={`${no}. ${question}`} marginTop={8} />
+                <Text type="P1" content={`${no}. ${question}`} marginTop={8} style={{lineHeight: 1.4}}/>
                 <Text type="D1" content={source} align="right" marginVertical={5} />
                 <div className="img-container">
                     <img src={image}/>
@@ -117,7 +117,11 @@ export function Solve(){
                 okText={isFinal ? "결과 보기" : "다음 문제로"}
                 cancelButtonProps={{ style: { display: 'none' } }}
             >
-                <Text type="P2" content={solution} />
+                <Box flexDirection="column">
+                    <Text type="D2" content={question} />
+                    <Text type="P1" bold content={`정답 : ${answer ? "O" : "X"}`} marginTop={6}/>
+                    <Text type="P2" content={solution} />
+                </Box>
             </Modal>
         </Wrapper>
 

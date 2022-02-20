@@ -4,6 +4,7 @@ import { MdRemove } from 'react-icons/md'
 import { Box, Text } from "materials"
 import { ChangeEvent, useRef, useState } from "react";
 import { register_api } from "api/register.api";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
     padding: 16px 22px;
@@ -19,6 +20,15 @@ const Wrapper = styled.div`
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
     }
+    .call-out {
+        background-color: #e3f1ff;
+        border-radius: 5px;
+        margin: auto;
+        padding: 6px;
+        & > span{
+            height: 12px;
+        }
+    }
 `
 
 const subjects = [
@@ -33,6 +43,7 @@ const subjects = [
 ]
 
 export function Register(){
+    const navigate = useNavigate()
     const [subjectSelected, setSubjectSelected] = useState<boolean[]>(Array(subjects.length).fill(false))
     const toggle = (index: number) => () => setSubjectSelected(prev => {
         const state = !prev[index]
@@ -69,9 +80,13 @@ export function Register(){
     }
 
 
-    const onSubmit = ({agree}:{agree:boolean}) => {
+    const onSubmit = ({agree, email}:{agree:boolean, email?: string}) => {
         const tel=`${tel1}${tel2}${tel3}`
-        if(tel.length!==11){
+        if(!tel && !email){
+            alert("전화번호나 이메일 중 하나를 입력해주세요.")
+            return;
+        }
+        if(!email && tel.length!==11){
             alert("전화번호를 확인해주세요.")
             return;
         }
@@ -84,7 +99,7 @@ export function Register(){
             return;
         }
         const subject_selected = subjects.filter((s, i) => subjectSelected[i])
-        register_api(tel, subject_selected)
+        register_api(tel, subject_selected, email).then(() => navigate('thankyou'))
     }
 
     return (
@@ -93,7 +108,14 @@ export function Register(){
                 autoComplete="off"
                 onFinish={onSubmit}
             >
-                <Box flexDirection="column" marginBottom={24}>
+                <div className="call-out">
+                    <Box flexDirection="column" alignItems="center">
+                        <Text size={11} content="💡 ’오늘의 선지’는 4월 중, ios/android 동시 출시예정이에요." marginBottom={-2} />
+                        <Text size={11} content="아래의 항목을 작성하여 누구보다 빠르게 출시 소식을 받아보세요."  />
+                    </Box>
+                </div>
+
+                <Box flexDirection="column" marginTop={12} marginBottom={24}>
                     <Text 
                         type="P1" 
                         content="전화번호" 
@@ -130,6 +152,22 @@ export function Register(){
                     </Box>
                 </Box>
 
+                <Text 
+                    type="P1" 
+                    content="이메일"  
+                />
+                <Form.Item
+                    name="email"
+                    // valuePropName="email"
+                    rules={[{ 
+                        type: 'email',
+                        message: '이메일 형식이 올바르지 않습니다.'
+                    }]}
+                    style={{marginTop: 6}}
+                >
+                    <Input  />
+                </Form.Item>
+
                 <Divider />
             
                 <Box flexDirection="column" marginVertical={12} >
@@ -151,7 +189,7 @@ export function Register(){
 
                     <Divider style={{marginTop: 12, marginBottom:12}} />
                     {/* 사탐 */}
-                    <Text type="P2" content="[ 사회탐구 ]"  />
+                    <Text type="P2" content="[ 사회탐구 ]" marginBottom={5} />
                     <div className="grid-box">
                         {subjects.slice(1,4).map((name, index) => (
                             <Button 
@@ -191,7 +229,7 @@ export function Register(){
 
                     <Divider style={{marginTop: 12, marginBottom:12}} />
                     {/* 과탐 */}
-                    <Text type="P2" content="[ 과학탐구 ]"  />
+                    <Text type="P2" content="[ 과학탐구 ]" marginBottom={5} />
                     <div className="grid-box">
                         {subjects.slice(10,13).map((name, index) => (
                             <Button 

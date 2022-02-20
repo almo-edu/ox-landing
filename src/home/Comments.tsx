@@ -20,8 +20,9 @@ const Wrapper = styled.section`
         padding-top: 4px;
     }
     .highlight {
-        padding-top: 4px;
-        background-color: #ffaaaa;
+        background-color: #ffcc8e;
+        border-radius: 3px;
+        padding: 4px 1px 1px 1px;
     }
 `
 
