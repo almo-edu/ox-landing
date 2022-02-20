@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/whynotedu/static/css/main.a2c247fb.css",
-    "main.js": "/whynotedu/static/js/main.ac92f15d.js",
-    "static/media/adv2.png": "/whynotedu/static/media/adv2.99c140487f989ce43527.png",
-    "static/media/feature1.png": "/whynotedu/static/media/feature1.53f63d3a37526f6f7096.png",
-    "static/media/adv1.png": "/whynotedu/static/media/adv1.c1db4b1855a924a44799.png",
+    "main.js": "/whynotedu/static/js/main.d01388cf.js",
+    "static/media/feature1.png": "/whynotedu/static/media/feature1.842a8ea50c53a7d21981.png",
+    "static/media/adv2.png": "/whynotedu/static/media/adv2.1488dee5904be82142da.png",
+    "static/media/adv1.png": "/whynotedu/static/media/adv1.8c83cc1981aa3de76842.png",
     "index.html": "/whynotedu/index.html",
     "main.a2c247fb.css.map": "/whynotedu/static/css/main.a2c247fb.css.map",
-    "main.ac92f15d.js.map": "/whynotedu/static/js/main.ac92f15d.js.map"
+    "main.d01388cf.js.map": "/whynotedu/static/js/main.d01388cf.js.map"
   },
   "entrypoints": [
     "static/css/main.a2c247fb.css",
-    "static/js/main.ac92f15d.js"
+    "static/js/main.d01388cf.js"
   ]
 }
