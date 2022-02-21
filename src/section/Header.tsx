@@ -49,7 +49,7 @@ export function Header(){
                     )}
                     <span style={{padding:4}} />
                     {location.pathname!=="/register" && (
-                        <Popover placement="bottom" content={
+                        <Popover placement="bottomRight" content={
                             <Box flexDirection="column" alignItems="center">
                                 <span>오늘의 선지 사전예약하고,</span>
                                 <span 

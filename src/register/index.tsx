@@ -140,6 +140,7 @@ export function Register(){
                             maxLength={3} 
                             value={tel1} 
                             name="tel1"
+                            type="tel"
                             onChange={onChangeTel}
                         />
                         <MdRemove color="#a4a2a9" style={{margin:4}} />
@@ -149,6 +150,7 @@ export function Register(){
                             maxLength={4} 
                             value={tel2} 
                             name="tel2"
+                            type="tel"
                             onChange={onChangeTel}
                             tabIndex={2}
                         />
@@ -159,6 +161,7 @@ export function Register(){
                             maxLength={4} 
                             name="tel3"
                             value={tel3} 
+                            type="tel"
                             onChange={onChangeTel} 
                             tabIndex={3}
                         />
