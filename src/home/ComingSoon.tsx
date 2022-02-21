@@ -4,6 +4,7 @@ import adv1 from "assets/adv1.png"
 import { MAIN_COLOR } from "style/constants";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
+import { MAIN_IMAGE } from "./Feature";
 
 const Wrapper = styled.section`
     background-color: #F5F5F5;
@@ -46,7 +47,7 @@ export function ComingSoon(){
                 <Text type="D2" size={9} content="*응시생 많은 과목부터 순차 출시" marginTop={4} />
             </Box>
 
-            <img src={adv1} />
+            <img src={MAIN_IMAGE} />
         </Wrapper>
     )
 }
