@@ -3,7 +3,7 @@ import { NotFound } from "NotFound";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import { Register } from "register";
 import { Header, HEADER_HEIGHT } from "section/Header";
-import { Solve } from "solve";
+import { Quiz } from "quiz";
 import styled from "styled-components";
 import { Thankyou } from "thankyou";
 
@@ -22,7 +22,7 @@ export function Router(){
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/register" element={<Register />} />
-                    <Route path="/quiz/:code" element={<Solve />} />
+                    <Route path="/quiz/:code" element={<Quiz />} />
                     <Route path="/thankyou" element={<Thankyou />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>

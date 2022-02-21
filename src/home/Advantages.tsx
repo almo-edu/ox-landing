@@ -76,9 +76,9 @@ export function Advantages(){
                         marginBottom={20}
                     />
                     <Box justifyContent="center">
-                        <img src={adv1} />
+                        <img src={"https://user-images.githubusercontent.com/30591542/154877612-a432dd7d-c590-4310-9f50-6b2d8bb4a037.png"} />
                         <span style={{padding: 12}} />
-                        <img src={adv2} />
+                        <img src="https://user-images.githubusercontent.com/30591542/154877161-df6b0e6e-d82b-4eb4-a441-ef44948790e8.png" />
                     </Box>
                 </Box>
 

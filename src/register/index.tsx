@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Form, Input, Button, Checkbox, Divider, Radio } from 'antd';
 import { MdRemove } from 'react-icons/md'
 import { Box, Text } from "materials"
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { register_api } from "api/register.api";
 import { useNavigate } from "react-router-dom";
 import { Event } from "./Event"
@@ -118,6 +118,9 @@ export function Register(){
         const subject_selected = subjects.filter((s, i) => subjectSelected[i])
         register_api(tel, subject_selected, grade).then(() => navigate('/thankyou'))
     }
+
+    // 가장 위로 이동
+    useEffect(()=>window.scrollTo(0, 0),[])
 
     return (
         <>

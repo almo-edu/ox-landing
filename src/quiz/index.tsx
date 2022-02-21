@@ -49,17 +49,16 @@ const Wrapper = styled.div`
         }
     }
 `
-interface SolveParamList {
+interface QuizParamList {
     code: string
     [key: string]: string
 }
 
-export function Solve(){
-    const { code } = useParams<SolveParamList>();
+export function Quiz(){
+    const { code } = useParams<QuizParamList>();
     const subject = SUBJECTS.find(s => s.code === code?.toUpperCase())
     const {
         getNextProblem,
-        getScore,
         solve
     } = useSolvedProblemInfo(code || "")
 

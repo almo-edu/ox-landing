@@ -26,7 +26,7 @@ export const Event = () => {
                 <Text content={"사전 예약 이벤트"} size={20} marginTop={8} />
                 <Text type="D2" content={"4월 출시되는 '오늘의 선지' 사전 예약하고"} marginTop={20} />
                 <Box>
-                    <Text className="highlight" size={11} content={"🍗BBQ 🍧베라 기프티콘 받자!"}  />
+                    <Text className="highlight" size={11} content={"🍗BBQ 🍧베라 기프티콘 받자!"}  />
                 </Box>
 
             </Box>
