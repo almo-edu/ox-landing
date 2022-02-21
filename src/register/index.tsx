@@ -305,7 +305,7 @@ export function Register(){
 
                 <Form.Item>
                     <Button type="primary" htmlType="submit">
-                        제출
+                        사전 예약하고 이벤트 참여하기
                     </Button>
                 </Form.Item>
             </Form>
