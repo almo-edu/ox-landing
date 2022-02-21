@@ -98,7 +98,7 @@ export function Register(){
 
 
     const onSubmit = ({agree, grade}:{agree:boolean, grade: string}) => {
-        console.log(agree)
+        console.log(agree, grade)
         const tel=`${tel1}${tel2}${tel3}`
         if(!grade){
             alert('모의고사(탐구) 평균 등급을 선택해 주세요!')
@@ -280,10 +280,6 @@ export function Register(){
                 <Form.Item
                     name="agree"
                     valuePropName="checked"
-                    rules={[{
-                        required: true,
-                        message: '개인정보 수집 및 활용에 동의해주세요.'
-                    }]}
                 >
                     <Checkbox>
                         개인정보 수집 및 활용에 동의합니다.
