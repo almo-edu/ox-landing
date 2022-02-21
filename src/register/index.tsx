@@ -98,6 +98,7 @@ export function Register(){
 
 
     const onSubmit = ({agree, grade}:{agree:boolean, grade: string}) => {
+        console.log(agree)
         const tel=`${tel1}${tel2}${tel3}`
         if(!grade){
             alert('모의고사(탐구) 평균 등급을 선택해 주세요!')
@@ -109,10 +110,6 @@ export function Register(){
         }
         if(!subjectSelected.some(i=>i)) {
             alert("관심과목을 선택해주세요.")
-            return;
-        }
-        if(!agree){
-            alert("개인정보 수집 및 활용에 동의해주세요.")
             return;
         }
         const subject_selected = subjects.filter((s, i) => subjectSelected[i])
@@ -283,8 +280,14 @@ export function Register(){
                 <Form.Item
                     name="agree"
                     valuePropName="checked"
+                    rules={[{
+                        required: true,
+                        message: '개인정보 수집 및 활용에 동의해주세요.'
+                    }]}
                 >
-                    <Checkbox>개인정보 수집 및 활용에 동의합니다.</Checkbox>
+                    <Checkbox>
+                        개인정보 수집 및 활용에 동의합니다.
+                    </Checkbox>
                     <Box flexDirection="column" className="policy">
                         <Text 
                             type="D2"
