@@ -47,7 +47,7 @@ export function ComingSoon(){
                 <Text type="D2" size={9} content="*응시생 많은 과목부터 순차 출시" marginTop={4} />
             </Box>
 
-            <img src={MAIN_IMAGE} />
+            <img src="https://user-images.githubusercontent.com/30591542/154878624-64de3026-7ae5-42ae-bf99-dad49b1db3b8.png" />
         </Wrapper>
     )
 }
