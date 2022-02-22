@@ -3,7 +3,7 @@ import { Box, Text } from "materials";
 import { NotFound } from "NotFound";
 import { useParams } from "react-router-dom";
 import styled from "styled-components"
-import {FiCircle, FiX} from "react-icons/fi";
+import { FiCircle, FiX } from "react-icons/fi";
 import { Tag } from "antd";
 import { MAIN_COLOR } from "style/constants";
 import { useSolvedProblemInfo } from "atoms/solved.atom";
