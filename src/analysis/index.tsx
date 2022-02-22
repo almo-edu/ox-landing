@@ -62,10 +62,10 @@ export const Analysis = () => {
                     const isSci = subjects.filter(subject => science.includes(subject)).length > 0
                     // const isSci = 
                     return (
-                        <Box key={tel} marginTop={8} justifyContent="space-between" alignItems="center">
+                        <Box key={tel} marginTop={10} justifyContent="space-between" alignItems="center">
                             <Text type="P2" content={tel} />
                             <Text type="P2" content={createdAt ? dayjs(createdAt).format("MM/DD HH:mm:ss") : "-"} />
-                            <Box style={{width: 150}} justifyContent="center" >
+                            <Box style={{width: 130}} justifyContent="center" >
                                 {isHis && <Tag color="gold" children="한국사"/> }
                                 {isSoc && <Tag color="green" children="사탐"/> }
                                 {isSci && <Tag color="blue" children="과탐"/> }
