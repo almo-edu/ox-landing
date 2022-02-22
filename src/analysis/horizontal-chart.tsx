@@ -16,13 +16,7 @@ const getColor = (length:number, index:number) => {
 };
   
 const BAR_AXIS_SPACE = 10;
-const maxTextWidth = 0;
-
-
-interface SubjectDataProps {
-    name: string
-    response: number
-}
+const maxTextWidth = 50;
 
 interface HorizontalChartProps<T> {
     data: Array<T>
