@@ -6,7 +6,8 @@ export const register_api = async (tel: string, subjects:string[], grade:string)
         await addDoc(collection(db, "registers"), {
             tel,
             subjects,
-            grade
+            grade,
+            createdAt: new Date().getTime()
         });
     } catch (e) {
     }   

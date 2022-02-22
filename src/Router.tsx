@@ -6,6 +6,7 @@ import { Header, HEADER_HEIGHT } from "section/Header";
 import { Quiz } from "quiz";
 import styled from "styled-components";
 import { Thankyou } from "thankyou";
+import { Analysis } from "analysis";
 
 const Main = styled.div`
     max-width: 500px;
@@ -24,6 +25,7 @@ export function Router(){
                     <Route path="/register" element={<Register />} />
                     <Route path="/quiz/:code" element={<Quiz />} />
                     <Route path="/thankyou" element={<Thankyou />} />
+                    <Route path="/event/analysis" element={<Analysis />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Main>

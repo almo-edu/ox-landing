@@ -30,7 +30,6 @@ export function Header(){
     const toHome = () => navigate('/')
     const toRegister = () => navigate('/register')
     const toQuiz = () => navigate('quiz/HIS')
-    console.log(location.pathname)
 
     return (
         <HeaderContainer>

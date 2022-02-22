@@ -7,6 +7,8 @@ import { register_api } from "api/register.api";
 import { useNavigate } from "react-router-dom";
 import { Event } from "./Event"
 import { Gifts } from "./Gifts";
+import { subjects_list } from "data/subjects-list.data";
+
 
 const Wrapper = styled.div`
     padding: 16px 22px;
@@ -48,20 +50,10 @@ const Wrapper = styled.div`
     }
 `
 
-const subjects = [
-    "한국사",
-
-    "생활과 윤리", "윤리와 사상", "한국지리",
-    "세계지리", "동아시아사", "세계사",
-    "경제", "정치와 법", "사회·문화",
-
-    "물리학 Ⅰ", "물리학 Ⅱ", "화학 Ⅰ", "화학 Ⅱ",
-    "생명과학 Ⅰ", "생명과학 Ⅱ", "지구과학 Ⅰ","지구과학 Ⅱ"
-]
 
 export function Register(){
     const navigate = useNavigate()
-    const [subjectSelected, setSubjectSelected] = useState<boolean[]>(Array(subjects.length).fill(false))
+    const [subjectSelected, setSubjectSelected] = useState<boolean[]>(Array(subjects_list.length).fill(false))
     const toggle = (index: number) => () => setSubjectSelected(prev => {
         const state = !prev[index]
         return prev.slice(0,index).concat([state]).concat(prev.slice(index+1))
@@ -112,7 +104,7 @@ export function Register(){
             alert("관심과목을 선택해주세요.")
             return;
         }
-        const subject_selected = subjects.filter((s, i) => subjectSelected[i])
+        const subject_selected = subjects_list.filter((s, i) => subjectSelected[i])
         register_api(tel, subject_selected, grade).then(() => navigate('/thankyou'))
     }
 
@@ -194,7 +186,7 @@ export function Register(){
                     <Text type="P2" content="[ 공통 ]" marginBottom={5} />
                     <div className="grid-box">
                         <Button type={subjectSelected[0] ? "primary" :"default"} onClick={toggle(0)}>
-                            {subjects[0]}
+                            {subjects_list[0]}
                         </Button>
                     </div>
 
@@ -204,7 +196,7 @@ export function Register(){
                     {/* 사탐 */}
                     <Text type="P2" content="[ 사회탐구 ]" marginBottom={5} />
                     <div className="grid-box">
-                        {subjects.slice(1,4).map((name, index) => (
+                        {subjects_list.slice(1,4).map((name, index) => (
                             <Button 
                                 key={index+1}
                                 type={subjectSelected[index+1] ? "primary" :"default"} 
@@ -216,7 +208,7 @@ export function Register(){
                         ))}
                     </div>
                     <div className="grid-box">
-                        {subjects.slice(4,7).map((name, index) => (
+                        {subjects_list.slice(4,7).map((name, index) => (
                             <Button 
                                 key={index+4}
                                 type={subjectSelected[index+4] ? "primary" :"default"} 
@@ -228,7 +220,7 @@ export function Register(){
                         ))}
                     </div>
                     <div className="grid-box">
-                        {subjects.slice(7,10).map((name, index) => (
+                        {subjects_list.slice(7,10).map((name, index) => (
                             <Button 
                                 key={index+7}
                                 type={subjectSelected[index+7] ? "primary" :"default"} 
@@ -244,7 +236,7 @@ export function Register(){
                     {/* 과탐 */}
                     <Text type="P2" content="[ 과학탐구 ]" marginBottom={5} />
                     <div className="grid-box">
-                        {subjects.slice(10,13).map((name, index) => (
+                        {subjects_list.slice(10,13).map((name, index) => (
                             <Button 
                                 key={index+10}
                                 type={subjectSelected[index+10] ? "primary" :"default"} 
@@ -256,7 +248,7 @@ export function Register(){
                         ))}
                     </div>
                     <div className="grid-box">
-                        {subjects.slice(13,16).map((name, index) => (
+                        {subjects_list.slice(13,16).map((name, index) => (
                             <Button 
                                 key={index+13}
                                 type={subjectSelected[index+13] ? "primary" :"default"} 
@@ -269,10 +261,10 @@ export function Register(){
                     </div>
                     <div className="grid-box">
                         <Button type={subjectSelected[16] ? "primary" :"default"} onClick={toggle(16)}>
-                            {subjects[16]}
+                            {subjects_list[16]}
                         </Button>
                         <Button type={subjectSelected[17] ? "primary" :"default"} onClick={toggle(17)}>
-                            {subjects[17]}
+                            {subjects_list[17]}
                         </Button>
                     </div>
                 </Box>

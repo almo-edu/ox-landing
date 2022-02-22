@@ -8,3 +8,4 @@ export const SUBJECTS:ISubject[] = [
         problems: HISTORY
     }
 ]
+
