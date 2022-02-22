@@ -1,3 +1,4 @@
+import { Divider } from "antd"
 import { get_response_api } from "api/get-responses"
 import { responseState } from "atoms/response.atom"
 import dayjs from "dayjs"
@@ -16,7 +17,6 @@ const Wrapper = styled.div`
         width: 100%;
         margin: auto;
         margin-top: 16px;
-        margin-bottom: 24px;
     }
 `
 export const Analysis = () => {
@@ -30,10 +30,16 @@ export const Analysis = () => {
             <div className="chart">
                 <SubjectChart />
             </div>
+            <Divider />
+
+
             <Text type="P1" bold align="center" content={`성적 분포`} />
             <div className="chart">
                 <GradeChart />
             </div>
+            <Divider />
+
+
             <Text type="P1" bold align="center" content="응답" />
             <Box flexDirection="column">
                 {responses.map(({tel, createdAt}) => {
