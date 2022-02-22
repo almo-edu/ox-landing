@@ -1,4 +1,4 @@
-import { Box, Text } from "materials";
+import { Text } from "materials";
 import styled from "styled-components";
 
 const Wrapper = styled.div`

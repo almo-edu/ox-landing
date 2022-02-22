@@ -1,10 +1,8 @@
 import { Box, Text } from "materials";
 import styled from "styled-components";
-import adv1 from "assets/adv1.png"
 import { MAIN_COLOR } from "style/constants";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
-import { MAIN_IMAGE } from "./Feature";
 
 const Wrapper = styled.section`
     background-color: #F5F5F5;
