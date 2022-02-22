@@ -42,9 +42,9 @@ export const Analysis = () => {
 
             <Text type="P1" bold align="center" content="응답" />
             <Box flexDirection="column">
-                {responses.reverse().map(({tel, createdAt}) => {
+                {responses.map(({tel, createdAt}) => {
                     return (
-                        <Box marginTop={4} justifyContent="space-between">
+                        <Box key={tel} marginTop={4} justifyContent="space-between">
                             <Text type="P2" content={tel} />
                             <Text type="P2" content={createdAt ? dayjs(createdAt).format("MM/DD HH:mm:ss") : "-"} />
                         </Box>
