@@ -60,7 +60,6 @@ export const Analysis = () => {
                     const isHis = subjects.includes("한국사")
                     const isSoc = subjects.filter(subject => social.includes(subject)).length > 0
                     const isSci = subjects.filter(subject => science.includes(subject)).length > 0
-                    // const isSci = 
                     return (
                         <Box key={tel} marginTop={10} justifyContent="space-between" alignItems="center">
                             <Text type="P2" content={tel} />
