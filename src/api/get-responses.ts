@@ -1,4 +1,5 @@
 import { db } from "api/config";
+import dayjs from "dayjs";
 import { collection, getDocs } from "firebase/firestore";
 import { IResponse } from "interfaces/response.interface";
 
@@ -12,5 +13,8 @@ export const get_response_api = async () => {
         .filter((row, index, arr) => {
             return arr.findIndex(item => item.tel === row.tel) === index;   // 중복 제거
         });
+    // console.log(
+    //     res.map(obj => `${obj.createdAt ? dayjs(obj.createdAt).format('MM-DD_HH:mm') : '-'} ${obj.tel} ${obj.grade} ${obj.subjects}`).join('\n')
+    // )
     return res;
 }
