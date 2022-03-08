@@ -51,16 +51,19 @@ export function Header(){
                         <Popover placement="bottomRight" content={
                             <Box flexDirection="column" alignItems="center">
                                 <span>오늘의 선지 사전예약하고,</span>
-                                <span 
-                                    style={{
-                                        backgroundColor: "#ffcc8e", 
-                                        paddingLeft: 3, 
-                                        paddingRight: 3,
-                                        borderRadius: 3,
-                                        fontWeight: 600
-                                    }}>
-                                    🍗BBQ 🍧베라 기프티콘 받자!
-                                </span>
+                                <div>
+                                    <span 
+                                        style={{
+                                            backgroundColor: "#ffcc8e", 
+                                            paddingLeft: 3, 
+                                            paddingRight: 3,
+                                            borderRadius: 3,
+                                            fontWeight: 600
+                                        }}>
+                                        앱 출시 알림
+                                    </span>
+                                    &nbsp;받자!
+                                </div>
                             </Box>
                         } trigger="focus">
                             <Button 
