@@ -279,7 +279,7 @@ export function Register(){
                     <Box flexDirection="column" className="policy">
                         <Text 
                             type="D2"
-                            content="개인정보의 수집·이용 목적: 이벤트 진행" 
+                            content="개인정보의 수집·이용 목적: 서비스 출시 시 알림 제공" 
                         />
                         <Text 
                             type="D2"
@@ -287,19 +287,19 @@ export function Register(){
                         />
                         <Text 
                             type="D2"
-                            content="개인정보의 보유 및 이용기간: 이벤트 종료 및 서비스 출시 알림 전송 후 파기" 
+                            content="개인정보의 보유 및 이용기간: 서비스 출시 알림 전송 후 파기" 
                         />
                         <Text 
                             type="D2"
-                            content="*동의를 거부할 권리가 있으며 동의 거부시 이벤트 참여가 제한될 수 있습니다." 
+                            content="*동의를 거부할 권리가 있으며 동의 거부시 출시 알림이 제한될 수 있습니다." 
                         />
                     </Box>
                 </Form.Item>
 
 
                 <Form.Item>
-                    <Button type="primary" htmlType="submit">
-                        사전 예약하고 이벤트 참여하기
+                    <Button type="primary" htmlType="submit" style={{width: "100%", height: 36}}>
+                        출시 알림 받기
                     </Button>
                 </Form.Item>
             </Form>
