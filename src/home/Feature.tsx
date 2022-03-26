@@ -22,7 +22,7 @@ export function Feature(){
     return (
         <Wrapper >
             <Box style={{height: 250}} flexDirection="column" alignItems="center" justifyContent="center" >
-                <Text bold size={40} content="오늘의 선지" />
+                <Text bold size={40} content="COX" />
                 <Text size={16} content="수험생을 위한 최고의 기출 학습," marginTop={21} />
                 <Text size={16} content="O/X로 수능 정복하자!" marginTop={10} />
             </Box>

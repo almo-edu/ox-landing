@@ -55,7 +55,7 @@ export function Final({code}:FinalProps){
                 <Text
                     type="P1"
                     align="center"
-                    content="오늘의 선지와 함께"
+                    content="COX와 함께"
                     marginTop={24}
                 />
                 <Text

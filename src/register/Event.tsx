@@ -22,7 +22,7 @@ export const Event = () => {
         <Wrapper>
             <Box flexDirection="column" justifyContent="center">
                 <Text bold content={"Coming Soon"} color={MAIN_COLOR} size={22} marginTop={10} />
-                <Text bold content={"오늘의 선지"} size={24} marginTop={20} />
+                <Text bold content={"COX"} size={24} marginTop={20} />
                 <Text content={"출시 알림 받기"} size={18} marginTop={16} marginLeft={2} />
             </Box>
         </Wrapper>

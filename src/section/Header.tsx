@@ -34,7 +34,7 @@ export function Header(){
     return (
         <HeaderContainer>
             <Box>
-                <Text type="H2" content="오늘의 선지" onClick={toHome} />
+                <Text type="H2" content="COX" onClick={toHome} />
 
                 <Box>
                     {location.pathname === "/" && (
@@ -50,7 +50,7 @@ export function Header(){
                     {location.pathname!=="/register" && (
                         <Popover placement="bottomRight" content={
                             <Box flexDirection="column" alignItems="center">
-                                <span>오늘의 선지 사전예약하고,</span>
+                                <span>COX 사전예약하고,</span>
                                 <div>
                                     <span 
                                         style={{
