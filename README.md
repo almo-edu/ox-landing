@@ -5,3 +5,6 @@
 # ox-landing
 오늘의 선지 OX 랜딩페이지
 https://oxchoice.github.io/whynotedu/
+
+
+- <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " />
